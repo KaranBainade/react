@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Editor } from '@tinymce/tinymce-react';
+import EmailTemplateBody from './components/EmailTemplateBody';
+import Select from '@atlaskit/select';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  handleEditorChange = (e) => {
+    console.log('Content was updated:', e.target.getContent());
+  }
+
+  render() {
+    return (
+      <div>
+        <form>
+        <select>
+  <option value="grapefruit">Grapefruit</option>
+  <option value="lime">Lime</option>
+  <option selected value="coconut">Coconut</option>
+  <option value="mango">Mango</option>
+</select>
+          <EmailTemplateBody />
+        </form>
+      </div>
+
+    );
+  }
 }
 
 export default App;
