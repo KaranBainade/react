@@ -11,15 +11,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <form>
-        <select>
-  <option value="grapefruit">Grapefruit</option>
-  <option value="lime">Lime</option>
-  <option selected value="coconut">Coconut</option>
-  <option value="mango">Mango</option>
-</select>
-          <EmailTemplateBody />
-        </form>
+        <EmailTemplateBody />
+
       </div>
 
     );
